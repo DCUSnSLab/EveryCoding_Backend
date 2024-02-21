@@ -8,8 +8,9 @@ from contest.models import Contest
 from submission.models import Submission
 from ..serializers import PostListSerializer, PostDetailSerializer, CommentSerializer, PostListPushSerializer
 import openai
+import os
 
-OPENAI_API_KEY='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'
+OPENAI_API_KEY=os.environ.get('OPENAI_API_KEY')
 openai.api_key=OPENAI_API_KEY
 '''
     post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='comments')
