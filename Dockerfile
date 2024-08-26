@@ -12,7 +12,7 @@ RUN apk add --update --no-cache build-base nginx openssl curl unzip supervisor j
     apk del build-base --purge
 
 RUN mkdir dist
-RUN curl -o dist.tar.gz http://203.250.33.99:31683/everycoding/latest.tar.gz   && \
+RUN curl -o dist.tar.gz http://203.250.33.103:31439/everycoding/latest.tar.gz   && \
     tar -xvzf dist.tar.gz -C dist && \
     rm dist.tar.gz
 
