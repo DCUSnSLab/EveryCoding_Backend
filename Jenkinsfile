@@ -29,8 +29,8 @@ node {
     }
 
     stage('Kubernetes deploy') {
-        sh "kubectl delete -f /services/dcucoding/ec-backend_con.yaml -n everycoding-test"
-        sh "kubectl apply -f /services/dcucoding/ec-backend_con.yaml -n everycoding-test"
+        sh "kubectl delete -f /services/dcucoding/test/ec-backend_test_con.yaml -n everycoding-test"
+        sh "kubectl apply -f /services/dcucoding/test/ec-backend_test_con.yaml -n everycoding-test"
     }
 
     stage('Complete') {
